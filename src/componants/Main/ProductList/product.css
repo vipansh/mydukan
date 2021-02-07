@@ -1,0 +1,127 @@
+.product {
+  margin: 0rem auto;
+  padding: 0.5rem;
+}
+.category-header {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 500;
+}
+.see-all {
+  color: rgb(20, 110, 180);
+  font-weight: 500;
+  font-size: 15px;
+}
+.product-title {
+  border: 1px solid rgb(242, 242, 242);
+  position: sticky;
+  background-color: rgb(250, 250, 250);
+  position: sticky;
+  top: 115px;
+  padding: 12px 12px 8px;
+  background: #fff;
+  z-index: 2;
+  text-transform: capitalize;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 500;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+.product-count-badge {
+  background-color: #146eb4;
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: #fff;
+  margin-left: 6px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  min-width: 29px;
+  text-align: center;
+  display: inline-block;
+}
+
+.about-product {
+  margin: 1rem auto;
+  padding: 0.5rem;
+}
+.product-view {
+  overflow: scroll;
+  height: 43.5rem;
+  margin: 0rem auto;
+  overflow-x: hidden;
+}
+
+.product-name-txt {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+}
+
+.prod-unit-txt {
+  font-size: 14px;
+  line-height: 18px;
+  margin: 8px 0;
+}
+.product-cost {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.product-cost .original-cost {
+  margin-left: 6px;
+  text-decoration: line-through;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  color: grey;
+  padding: 0.5rem 0;
+}
+
+.product-img-wrap > img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  object-fit: contain;
+}
+.element-product {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem 0.8rem;
+}
+.product-discription {
+  margin: 0rem 0 0 1rem;
+  padding: 1rem 0.8rem;
+  width: 100%;
+}
+.discount-badge-wrap {
+  z-index: 1;
+  height: 22px;
+  text-align: center;
+}
+.product-discount-badge {
+  background-color: #ee741f;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  padding: 3px 8px;
+}
+
+ul > li {
+  display: flex;
+  padding: 16px 32px;
+  cursor: pointer;
+}
+ol,
+ul {
+  margin: 0;
+  list-style: none;
+}

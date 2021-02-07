@@ -1,0 +1,82 @@
+.header {
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.navbar-container {
+  margin: 0 auto;
+  display: flex;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 80%;
+}
+.navbar {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 16px 0;
+  background-color: #fff;
+  height: 90px;
+}
+
+.navbar-title {
+  width: 65%;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navbar-cart {
+  display: flex;
+  height: 65px;
+
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-btn-badge {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #e50b20;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 2px 0;
+  top: 10px;
+  left: 10px;
+}
+
+.detail {
+  color: #1a181e;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  align-items: center;
+  margin: auto 0;
+  padding: 1rem 0;
+  margin-left: 0.8rem;
+}
+.detail-badge {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #4d4d4d;
+  margin-left: 0.2rem;
+}
+
+.navbar-cart-badge {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-cart-img {
+  margin-right: 8px;
+  width: 28px;
+  height: 28px;
+}
