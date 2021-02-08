@@ -6,28 +6,26 @@
   overflow-x: hidden;
 }
 .category-link {
-  color: #146eb4;
-  background-image: linear-gradient(
-    270deg,
-    rgba(20, 110, 180, 0.08),
-    rgba(20, 110, 180, 0)
-  );
-  border-right: 4px solid #146eb4;
   text-transform: capitalize;
   padding: 6px 8px 6px 0;
   margin: 0.5rem 0;
   display: block;
-  font-size: 20px;
+  font-size: 1rem;
   line-height: 24px;
   font-weight: 400;
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  color: #1a181e;
+}
+.category-link a {
+  text-decoration: none;
+  color: #1a181e;
 }
 
 .all-categories-link {
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   font-weight: 500;
 }
@@ -40,6 +38,28 @@
   margin-left: 6px;
 }
 
-.category-link a:visited {
+.link-active {
+  text-transform: capitalize;
+  padding: 6px 8px 6px 0;
+  margin: 0.5rem 0;
+  display: block;
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
   color: #146eb4;
+  background-image: linear-gradient(
+    270deg,
+    rgba(20, 110, 180, 0.08),
+    rgba(20, 110, 180, 0)
+  );
+  border-right: 4px solid #146eb4;
+}
+
+.link-active a {
+  text-decoration: none;
+  color: #146eb4;
+  font-weight: 500;
 }

@@ -43,8 +43,8 @@
   border-radius: 10px;
   color: #fff;
   text-align: center;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 1rem;
+  line-height: 1rem;
   padding: 2px 0;
   top: 10px;
   left: 10px;
@@ -52,7 +52,7 @@
 
 .detail {
   color: #1a181e;
-  font-size: 18px;
+  font-size: 1.2rem;
   line-height: 26px;
   font-weight: 500;
   align-items: center;
@@ -61,7 +61,7 @@
   margin-left: 0.8rem;
 }
 .detail-badge {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 16px;
   font-weight: 500;
   color: #4d4d4d;

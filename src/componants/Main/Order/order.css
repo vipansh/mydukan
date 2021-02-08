@@ -18,7 +18,7 @@
 }
 
 .product-order-cost {
-  font-size: 20px;
+  font-size: 1.2rem;
   line-height: 28px;
   font-weight: 500;
   padding: 0.5rem 0;
@@ -28,7 +28,7 @@
 .product-order-cost .original-cost {
   margin-left: 6px;
   text-decoration: line-through;
-  font-size: 18px;
+  font-size: 1.1rem;
   line-height: 26px;
   font-weight: 400;
   color: grey;
@@ -38,8 +38,8 @@
 .cart-grand-total-row {
   border-top: 1px dashed #e6e6e6;
   color: #1a181e;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1re,;
+  line-height: 1.5rem;
   font-weight: 500;
   padding-top: 16px;
   display: flex;
@@ -56,7 +56,7 @@
   padding: 12px 20px;
   border-radius: 6px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   color: #fff;
   cursor: pointer;

@@ -33,7 +33,7 @@
   border-top: 1px solid hsla(0, 0%, 100%, 0.1);
 }
 .store-details-header {
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 20px;
   opacity: 0.6;
   margin-bottom: 12px;
@@ -42,7 +42,7 @@
 }
 
 .section-text-1 {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   font-weight: 500;
   color: #fff;
