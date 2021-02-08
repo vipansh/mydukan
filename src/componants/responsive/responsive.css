@@ -1,0 +1,135 @@
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+  .flex-1 {
+    display: none;
+  }
+
+  .flex-3 {
+    display: none;
+  }
+
+  .flex-2 {
+    display: block;
+    width: 100%;
+  }
+  .flex {
+    width: 100%;
+  }
+
+  .navbar-cart {
+    display: none;
+  }
+  .navbar {
+    border: none;
+    height: 10rem;
+  }
+  .product-search-bar {
+    padding-bottom: 30px;
+  }
+  .searchbar-container {
+    top: 60px;
+    padding: 0;
+  }
+  .product-search-bar {
+    padding-bottom: 0 1rem;
+  }
+  .category-header {
+    font-size: 1rem;
+  }
+  .product-title {
+    padding: 3px 5px 3px;
+  }
+  .mobile-footer {
+    padding: 12px 16px;
+    -moz-box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 -1px 3px 0 rgb(0 0 0 / 12%);
+    background-color: #fff;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    position: fixed;
+    bottom: 2rem;
+    width: 100%;
+    z-index: 4;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    justify-content: center;
+  }
+
+  .navbar-btn-link {
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 500;
+    color: #989898;
+    -webkit-flex: 1 1;
+    -moz-box-flex: 1;
+    flex: 1 1;
+    padding: 6px 10px;
+    max-width: 109px;
+    border-radius: 20px;
+    min-width: 109px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .inactive-icon {
+    display: none;
+  }
+  .navbar-btn-link-active {
+    background-color: rgba(20, 110, 180, 0.1);
+    color: #146eb4;
+  }
+
+  .navbar-btn-badge {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .cart-page {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .cart-page {
+    padding: 0;
+  }
+  .checkout-section {
+    margin-bottom: 14rem;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 100px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    cursor: pointer;
+  }
+  .empty-order {
+    padding: 0;
+  }
+  .order-view {
+    padding: 2rem;
+  }
+  .empty-order {
+    margin: 1rem auto;
+    height: 64vh;
+  }
+}

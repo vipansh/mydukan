@@ -11,6 +11,7 @@ import {
 
 } from "react-router-dom";
 import { CheckOut } from '../payment/CheckOut'
+import { MobileFooter } from '../Footer/MobileFooter.js'
 export const HomePage = () => {
 
     return (
@@ -25,6 +26,7 @@ export const HomePage = () => {
                     </Route>
                     <Route path="/bag" component={CheckOut} />
                 </Switch>
+            <MobileFooter />
             </CartContaxtProvider>
         </Router>
     )

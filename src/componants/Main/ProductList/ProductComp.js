@@ -6,7 +6,7 @@ export const ProductComp = ({ data, showImg }) => {
         <li className="element-product" >
 
             <span className={`product-img-wrap ${!showImg ? "cart-hide" : ""}`}>
-                <img src="https://api.mydukaan.io/static/images/category-def.jpg" alt={data.name} />
+                <img src={data.image} alt={data.name} />
                 <div class="discount-badge-wrap">
                     <span class="product-discount-badge">
                         {Math.floor(100 - ((data.base_cost / data.original_cost) * 100))}% OFF

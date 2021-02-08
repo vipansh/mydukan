@@ -3,7 +3,7 @@ import { Products } from '../ProductList/Products'
 
 export const ProductList = () => {
     return (
-        <div>
+        <>
 
             {/* <div className="no-product">
                 <img src={noProduct} alt="noProduct" />
@@ -14,6 +14,6 @@ export const ProductList = () => {
 
                 <Products />
             </div>
-        </div>
+        </>
     )
 }

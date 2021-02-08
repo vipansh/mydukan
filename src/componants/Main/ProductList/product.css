@@ -49,13 +49,14 @@
 }
 .product-view {
   overflow: scroll;
-  height: 27.5rem;
-  margin: 0rem auto;
+  margin: auto;
   overflow-x: hidden;
+  margin-top: 0.5rem;
+  height: 80%;
 }
 
 .product-name-txt {
-  font-size: 18px;
+  font-size: 1.2rem;
   line-height: 26px;
   font-weight: 500;
 }
@@ -125,3 +126,6 @@ ul {
   margin: 0;
   list-style: none;
 }
+
+
+

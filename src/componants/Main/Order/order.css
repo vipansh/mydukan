@@ -1,6 +1,6 @@
 .order-view {
   padding-top: 12px;
-  height: 29vh;
+  height: 50vh;
   overflow: auto;
   display: flex;
   flex-direction: column-reverse;
