@@ -3,6 +3,7 @@ import logoimg from './img/store-logo.jpg'
 import "./styles/navbar.css"
 import { Cart } from './Cart'
 import { Account } from './Account'
+import { Link } from 'react-router-dom'
 export const NavBar = () => {
     return (
         <div className="header">
@@ -10,9 +11,9 @@ export const NavBar = () => {
             <div className="navbar">
                 <div className="navbar-container">
 
-                    <div className="navbar-title">
+                    <Link to="/"><div className="navbar-title">
                         <img src={logoimg} alt="logoimg" className="logo-img" style={{ width: "4rem" }} /> <span className="detail">Dukan</span>
-                    </div>
+                    </div></Link>
                     <div className="navbar-cart">
                         <Cart />
                         <Account />

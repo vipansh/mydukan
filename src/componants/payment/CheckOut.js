@@ -9,26 +9,27 @@ import { Link } from 'react-router-dom'
 export const CheckOut = () => {
     const { cartItem, setCartItem } = useContext(CartContaxt)
 
-    const [confirmPageShow, setConfirmPageShow] = useState(true)
+    const [confirmPageShow, setConfirmPageShow] = useState(false)
     const [emptyCart, setEmptyCart] = useState()
 
     useEffect(() => {
         if (cartItem.length >= 1) {
-            setEmptyCart(true)
+            setEmptyCart(false)
         }
         else {
-            setEmptyCart(false)
+            setEmptyCart(true)
 
         }
-    }, [cartItem])
+        console.log(emptyCart, confirmPageShow)
+    }, [cartItem, confirmPageShow])
 
     return (
         <div>
             <div class="main-content-wrap">
-                <main class="main-container-checkout" >
-                    <div class={`container cart-page ${emptyCart || confirmPageShow ? "hidden-div" : null}`}>
+                <main class={`main-container-checkout  ${emptyCart ? "hidden-div" : null}`} >
+                    <div class={`container cart-page ${!confirmPageShow ? null : "hidden-div"}`} >
                         <div class="checkout-section">
-                            <CheckOutForm />
+                            <CheckOutForm setConfirmPageShow={setConfirmPageShow} />
                         </div>
                         <section class="cart-sidebar">
                             <div class="cart-sidebar-header-wrap card-1">
@@ -41,7 +42,7 @@ export const CheckOut = () => {
                         <ConfirmOrder />
                     </div>
                 </main>
-                <main class={`main-container-checkout ${!emptyCart ? null : "hidden-div"}`}>
+                <main class={`main-container-checkout ${emptyCart ? null : "hidden-div"}`}>
                     <div className="empty-order-bag  ">
 
                         <img src={emptybag} alt="noProduct" style={{ height: "189px", width: "13vw" }} />

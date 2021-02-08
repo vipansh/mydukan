@@ -1,33 +1,35 @@
 import React, { useState } from 'react'
 
-export const CheckOutForm = () => {
+export const CheckOutForm = ({ setConfirmPageShow }) => {
 
     const [loginDone, setloginDone] = useState(false)
     const [showAddressForm, setShowAddressForm] = useState(false)
     const [showPaymentForm, setShowPaymentForm] = useState(false)
 
 
+
+
     return (
 
         <div class="checkout-section">
             <form autocomplete="off">
-
+            <p class="text-2 c-gray-1">Don`t enter in input filed Login for now</p>
                 <div class="checkout-step-wrap active">
                     <div class="checkout-step-circle active">1</div>
                     <section class="card-1 account-card">
                         <h2 class="section-text-7 mb2">Account</h2>
                         <p class="text-2 c-gray-1">To place your order, log in by entering your 10 digit mobile number.</p>
-
                         {/* log-In form.... */}
 
                         <div class={`login-form-wrap ${loginDone ? "hidden-form" : "show-form"}`}>
+                            
 
                             <div class="form-group input-wrap has-prepend-text form-group-lg">
                                 <label class="field-label required">Mobile Number</label>
                                 <div class="input-group-wrap  login-form-flex ">
                                     <div>
                                         <span class="prepend-txt">+91</span>
-                                        <input inputmode="numeric" name="mobile" placeholder="Enter mobile number" maxlength="10" autocomplete="off" type="tel" value="" />
+                                        <input inputmode="numeric" name="mobile" placeholder="88******89" maxlength="10" autocomplete="off" type="tel" value="" />
                                     </div>
                                     <div>
                                         <button type="submit" class="btn-login" disabled="" onClick={(e) => {
@@ -111,7 +113,10 @@ export const CheckOutForm = () => {
                         <p class="text-2 c-gray-1">Select your payment method.</p>
                         <div class={`login-form-wrap ${!showPaymentForm ? "hidden-form" : "show-form"}`}>
                             <div class="payment-modes row"><div class="payment-mode "><h5 class="cash-text-1">Cash</h5></div>
-                                <button class="btn-login" type="button">Confirm order</button>
+                                <button class="btn-login" type="button" onClick={(e) => {
+                                    e.preventDefault()
+                                    setConfirmPageShow(true)
+                                }}>Confirm order</button>
                             </div>
                         </div>
                     </section>
