@@ -1,9 +1,10 @@
 .category-main-list {
   overflow: scroll;
-  height: 95vh;
+  height: 80vh;
   margin: 1rem auto;
   padding-top: 1rem;
   overflow-x: hidden;
+  position: sticky;
 }
 .category-link {
   text-transform: capitalize;
@@ -22,12 +23,16 @@
   text-decoration: none;
   color: #1a181e;
 }
+.category-link a:hover{
+  color: #146eb4;
+}
 
 .all-categories-link {
   cursor: pointer;
   font-size: 1rem;
   line-height: 24px;
   font-weight: 500;
+  
 }
 .anchor-1 {
   color: #146eb4;

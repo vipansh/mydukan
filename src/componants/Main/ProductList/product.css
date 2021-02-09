@@ -49,10 +49,8 @@
 }
 .product-view {
   overflow: scroll;
-  margin: auto;
   overflow-x: hidden;
-  margin-top: 0.5rem;
-  height: 80%;
+  height: 72vh;
 }
 
 .product-name-txt {
@@ -114,6 +112,7 @@
   line-height: 16px;
   font-weight: 600;
   padding: 3px 8px;
+  margin: auto 0.5rem;
 }
 
 ul > li {
@@ -127,5 +126,7 @@ ul {
   list-style: none;
 }
 
-
-
+.element-product a {
+  color: black;
+  width: 100%;
+}

@@ -14,14 +14,13 @@ export const TotalOrder = () => {
 
 
         setTotalAmount(total.reduce((a, b) => a + b, 0))
-        console.log(total.reduce((a, b) => a + b, 0))
 
     }, [cartItem])
 
     return (
         <div className="total-order-bag">
-            <div class="cart-grand-total-row"><span>Sub Total</span><span>₹{totalAmount}</span></div>
-            <div class="inclusive-tax-row"><span class="c-gray-1">Inclusive of all taxes</span></div>
+            <div className="cart-grand-total-row"><span>Sub Total</span><span>₹{totalAmount}</span></div>
+            <div className="inclusive-tax-row"><span className="c-gray-1">Inclusive of all taxes</span></div>
             <CheckOutBtn />
         </div>
     )

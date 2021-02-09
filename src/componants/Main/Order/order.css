@@ -3,7 +3,7 @@
   height: 50vh;
   overflow: auto;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 .element-product-order {
   width: 100%;
@@ -38,7 +38,7 @@
 .cart-grand-total-row {
   border-top: 1px dashed #e6e6e6;
   color: #1a181e;
-  font-size: 1re,;
+  font-size: 1re;
   line-height: 1.5rem;
   font-weight: 500;
   padding-top: 16px;

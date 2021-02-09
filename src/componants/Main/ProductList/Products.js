@@ -16,7 +16,7 @@ export const Products = () => {
     return (
         <div className="product-view">
             {products ? products.map((data, i) => {
-                return (<ProductList data={data} key={i} />)
+                return (<ProductList data={data} key={i}  />)
             }) : null}
         </div>
     )

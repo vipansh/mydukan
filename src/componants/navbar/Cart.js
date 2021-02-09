@@ -9,7 +9,7 @@ export const Cart = () => {
     return (
         <Link to="/bag">
             <div className="navbar-cart-badge">
-                <span class={`navbar-btn-badge ${cartItem.length === 0 ? "cart-hide" : ""}`} >{cartItem ? cartItem.length : null}</span>
+                <span className={`navbar-btn-badge ${cartItem.length === 0 ? "cart-hide" : ""}`} >{cartItem ? cartItem.length : null}</span>
                 <img src={bagsvg} alt="bag" className="navbar-cart-img" /><div className="detail-badge">Bag</div>
             </div >
         </Link>

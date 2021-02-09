@@ -6,11 +6,11 @@
   display: flex;
   align-items: stretch;
   width: 80%;
-  height: 100vh;
   margin: 0 auto;
+  height: 82vh;
 }
 .main-container {
-  height: 100vh;
+  height: 85vh;
 }
 .categories-sidebar {
   width: 255px;
@@ -41,7 +41,7 @@
 .empty-order {
   margin: 1rem auto;
   padding: 0 32px;
-  height: 100vh;
+  height: 80vh;
 }
 .empty-order-bag {
   display: flex;
@@ -66,6 +66,7 @@
 .flex-2 {
   width: 55%;
   border: 1px solid #e6e6e6;
+  height: 85vh;
 }
 .flex-3 {
   width: 25%;
@@ -99,7 +100,7 @@
 }
 
 .product-view-main {
-  height: 95vh;
+  height: 80vh;
   margin: 0rem auto;
   display: flex;
   align-items: center;

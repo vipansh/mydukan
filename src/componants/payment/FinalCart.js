@@ -63,15 +63,15 @@ export const FinalCart = () => {
                         {cartItem ? cartItem.map((data, i) => {
                             return (<Order data={data} key={i} showImg={false} />)
                         }) : null}
-                        <div class="cart-item-total">
-                            <div class="item-total-row">
+                        <div className="cart-item-total">
+                            <div className="item-total-row">
                                 <span>Item Total</span>
                                 <span>₹{totalAmount}</span>
                             </div>
-                            <div class="item-delivery-row">
+                            <div className="item-delivery-row">
                                 <span>Delivery</span>
                                 <span>
-                                    <span class="c-green-1">Free</span>
+                                    <span className="c-green-1">Free</span>
                                 </span>
                             </div>
                         </div>

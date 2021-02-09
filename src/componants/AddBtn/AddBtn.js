@@ -130,12 +130,12 @@ export const AddBtn = ({ product }) => {
 
 
             {/* plus-minus-btn */}
-            <div class={`product-button product-add-button-wrapper  ${!showaddbutton ? "show" : "hide"} `}>
-                <div class="minus-icon-wrap" aria-label="Remove Product" onClick={() => { minusOne() }} >
+            <div className={`product-button product-add-button-wrapper  ${!showaddbutton ? "show" : "hide"} `}>
+                <div className="minus-icon-wrap" aria-label="Remove Product" onClick={() => { minusOne() }} >
                     <span className="m-l6" > - </span>
                 </div>
-                <div class="qty-wrap">{productCount ? productCount : null}</div>
-                <div class="plus-icon-wrap" aria-label="Add Product" onClick={() => { addItem(product) }}>
+                <div className="qty-wrap">{productCount ? productCount : null}</div>
+                <div className="plus-icon-wrap" aria-label="Add Product" onClick={() => { addItem(product) }}>
 
                     <span className="m-l6" > + </span>
                 </div>

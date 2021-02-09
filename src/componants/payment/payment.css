@@ -155,7 +155,7 @@
 .checkout-section {
   overflow-y: scroll;
   height: 40rem;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .cart-grand-total-row {
@@ -251,5 +251,9 @@
   border: 1px solid #146eb4;
   background-color: #fff;
   text-align: center;
-    outline: none;
+  outline: none;
+}
+.empty-cart-img {
+  height: "189px";
+  width: "13vw";
 }

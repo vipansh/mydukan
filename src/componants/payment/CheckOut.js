@@ -20,37 +20,36 @@ export const CheckOut = () => {
             setEmptyCart(true)
 
         }
-        console.log(emptyCart, confirmPageShow)
     }, [cartItem, confirmPageShow])
 
     return (
         <div>
-            <div class="main-content-wrap">
-                <main class={`main-container-checkout  ${emptyCart ? "hidden-div" : null}`} >
-                    <div class={`container cart-page ${!confirmPageShow ? null : "hidden-div"}`} >
-                        <div class="checkout-section">
+            <div className="main-content-wrap">
+                <main className={`main-container-checkout  ${emptyCart ? "hidden-div" : null}`} >
+                    <div className={`container cart-page ${!confirmPageShow ? null : "hidden-div"}`} >
+                        <div className="checkout-section">
                             <CheckOutForm setConfirmPageShow={setConfirmPageShow} />
                         </div>
-                        <section class="cart-sidebar">
-                            <div class="cart-sidebar-header-wrap card-1">
+                        <section className="cart-sidebar">
+                            <div className="cart-sidebar-header-wrap card-1">
                                 <FinalCart />
                             </div>
                         </section>
                     </div>
-                    <div class={confirmPageShow ? null : "hidden-div"}>
+                    <div className={confirmPageShow ? null : "hidden-div"}>
 
                         <ConfirmOrder />
                     </div>
                 </main>
-                <main class={`main-container-checkout ${emptyCart ? null : "hidden-div"}`}>
+                <main className={`main-container-checkout ${emptyCart ? null : "hidden-div"}`}>
                     <div className="empty-order-bag  ">
 
-                        <img src={emptybag} alt="noProduct" style={{ height: "189px", width: "13vw" }} />
+                        <img src={emptybag} alt="noProduct" className="empty-cart-img" />
                         <div className="cart-text">
                             <h2 className="empty-order-text"> Your bag is empty</h2>
                             <p className="empty-order-text-p">  Looks like you haven’t made your choice yet.</p>
                         </div>
-                        <Link class="btn-primary-0" to="/">Back to homepage</Link>
+                        <Link className="btn-primary-0" to="/">Back to homepage</Link>
                     </div>
                 </main>
             </div>

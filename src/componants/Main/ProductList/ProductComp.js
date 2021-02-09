@@ -1,20 +1,22 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { AddBtn } from '../../AddBtn/AddBtn'
 
-export const ProductComp = ({ data, showImg }) => {
+export const ProductComp = ({ data, showImg, category }) => {
     return (
-        <li className="element-product" >
-
+        <li className="element-product"  >
             <span className={`product-img-wrap ${!showImg ? "cart-hide" : ""}`}>
                 <img src={data.image} alt={data.name} />
-                <div class="discount-badge-wrap">
-                    <span class="product-discount-badge">
+                <div className="discount-badge-wrap">
+                    <span className="product-discount-badge">
                         {Math.floor(100 - ((data.base_cost / data.original_cost) * 100))}% OFF
                             </span>
                 </div>
             </span>
-            <div className="product-discription"> <span className="product-name-txt">   {data.name}</span>
-                <p class="prod-unit-txt">per piece</p>
+            <div className="product-discription">
+                <Link to={`product/${category}/${data.id}`} className="product-name-txt" >    {data.name}
+                </Link>
+                <p className="prod-unit-txt">per piece</p>
 
                 <span className="product-cost">
                     <div>

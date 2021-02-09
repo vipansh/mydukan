@@ -1,6 +1,5 @@
 import React from 'react'
 import { CartContaxtProvider } from '../contaxt/CartContaxtProvider'
-import { Footer } from '../Footer/Footer'
 import { Displaydata } from '../Main/Displaydata'
 import { NavBar } from '../navbar/NavBar'
 import { Search } from '../Searchbar/Search'
@@ -12,21 +11,31 @@ import {
 } from "react-router-dom";
 import { CheckOut } from '../payment/CheckOut'
 import { MobileFooter } from '../Footer/MobileFooter.js'
+import { ProductPage } from '../productPage/ProductPage'
+// import { ProductPage } from '../productPage/ProductPage.js'
 export const HomePage = () => {
 
     return (
         <Router>
             <CartContaxtProvider>
-                <NavBar />
                 <Switch>
                     <Route path="/" exact>
+                        <NavBar />
+
                         <Search />
                         <Displaydata />
-                        <Footer />
                     </Route>
-                    <Route path="/bag" component={CheckOut} />
+                    <Route path="/product/:category/:id" >
+
+                        <ProductPage />
+                    </Route>
+                    <Route path="/bag" >
+                        <NavBar />
+
+                        <CheckOut />
+                    </Route>
                 </Switch>
-            <MobileFooter />
+                <MobileFooter />
             </CartContaxtProvider>
         </Router>
     )

@@ -2,13 +2,12 @@ import React from 'react'
 import { AddBtn } from '../../AddBtn/AddBtn'
 import './order.css'
 export const Order = ({ data }) => {
-    console.log(data)
     return (
         < div className="element-product-order" >
 
 
             <div className="product-order-discription"> <span className="product-order-name-txt">   {data.name}</span>
-                <p class="prod-unit-txt">per piece</p>
+                <p className="prod-unit-txt">per piece</p>
 
                 <span className="product-order-cost">
                     <div>
