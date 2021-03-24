@@ -111,6 +111,7 @@
 
 .order-success-page {
   text-align: center;
+  height: 90vh;
   display: flex;
   -webkit-align-items: center;
   -moz-box-align: center;
@@ -148,14 +149,11 @@
   background-color: #146eb4;
   text-align: center;
 }
-.main-container-checkout {
-  height: 80vh;
-}
 
 .checkout-section {
   overflow-y: scroll;
-  height: 40rem;
   margin: 0 auto;
+  scroll-behavior: smooth;
 }
 
 .cart-grand-total-row {

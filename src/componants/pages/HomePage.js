@@ -12,6 +12,7 @@ import {
 import { CheckOut } from '../payment/CheckOut'
 import { MobileFooter } from '../Footer/MobileFooter.js'
 import { ProductPage } from '../productPage/ProductPage'
+import { SearchResult } from './SearchResult'
 // import { ProductPage } from '../productPage/ProductPage.js'
 export const HomePage = () => {
 
@@ -26,8 +27,10 @@ export const HomePage = () => {
                         <Displaydata />
                     </Route>
                     <Route path="/product/:category/:id" >
-
                         <ProductPage />
+                    </Route>
+                    <Route path="/search/:value" >
+                        <SearchResult />
                     </Route>
                     <Route path="/bag" >
                         <NavBar />

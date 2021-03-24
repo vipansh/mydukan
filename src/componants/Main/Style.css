@@ -41,7 +41,6 @@
 .empty-order {
   margin: 1rem auto;
   padding: 0 32px;
-  height: 80vh;
 }
 .empty-order-bag {
   display: flex;
@@ -83,7 +82,7 @@
   line-height: 32px;
   font-weight: 500;
   margin: 1rem 0;
-  padding: 1rem 0rem 1rem 1.5rem;
+  padding: 1rem 0rem 1rem 0rem;
 }
 .cart-count-badge-value {
   background-color: #146eb4;
@@ -123,3 +122,4 @@
   border-bottom: 1px solid #4d4d4d;
   color: #4d4d4d;
 }
+

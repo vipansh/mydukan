@@ -1,12 +1,78 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 export const CheckOutForm = ({ setConfirmPageShow }) => {
+    const [showAddressForm, setShowAddressForm] = useState(false)
 
     const [loginDone, setloginDone] = useState(false)
-    const [showAddressForm, setShowAddressForm] = useState(false)
+
     const [showPaymentForm, setShowPaymentForm] = useState(false)
 
+    const [loginPhoneNo, setLoginPhoneNo] = useState("")
+    const [loginErr, setLoginErr] = useState(false)
 
+    const [address, setAddress] = useState({
+        name: "",
+        number: loginPhoneNo,
+        pinCode: "",
+        city: "",
+        address: ""
+    })
+
+
+    useEffect(() => {
+        let islogin = JSON.parse(localStorage.getItem('login'));
+        console.log(showAddressForm)
+        if (islogin) {
+            setShowAddressForm(true)
+            setloginDone(true)
+            setLoginPhoneNo(islogin)
+        }
+        else {
+            setShowAddressForm(false)
+            setloginDone(false)
+        }
+
+        let oldAddress = JSON.parse(localStorage.getItem('address'));
+        if (oldAddress) {
+            setAddress(oldAddress)
+        }
+
+
+
+    }, [])
+
+
+
+    function LogIn(e) {
+        e.preventDefault()
+
+
+        if (loginPhoneNo.length !== 10) {
+            setLoginErr(true)
+        }
+        else {
+
+            setloginDone(true)
+            setShowAddressForm(true)
+            localStorage.setItem('login', JSON.stringify(loginPhoneNo));
+        }
+
+    }
+
+
+    function handelChangeforAddress(e) {
+        setAddress((address) => {
+            return { ...address, [e.target.name]: e.target.value }
+        })
+    }
+
+    function AddAddress(e) {
+
+        localStorage.setItem('address', JSON.stringify(address));
+        e.preventDefault()
+        setShowAddressForm(false)
+        setShowPaymentForm(true)
+    }
 
 
     return (
@@ -29,14 +95,14 @@ export const CheckOutForm = ({ setConfirmPageShow }) => {
                                 <div className="input-group-wrap  login-form-flex ">
                                     <div>
                                         <span className="prepend-txt">+91</span>
-                                        <input inputmode="numeric" name="mobile" placeholder="88******89" maxlength="10" autocomplete="off" type="tel" value="" />
+                                        <input inputmode="numeric" name="mobile" placeholder="88******89" maxlength="10" autocomplete="off" type="tel" value={loginPhoneNo} onChange={(e) => {
+                                            setLoginPhoneNo(e.target.value)
+                                            setLoginErr(false)
+                                        }} />
+                                        {loginErr ? <div className="err-box">Incorrect Phone No.</div> : null}
                                     </div>
                                     <div>
-                                        <button type="submit" className="btn-login" disabled="" onClick={(e) => {
-                                            e.preventDefault()
-                                            setloginDone(true)
-                                            setShowAddressForm(true)
-                                        }}>Login</button>
+                                        <button type="submit" className="btn-login" disabled="" onClick={(e) => { LogIn(e) }}>Login</button>
                                     </div>
                                 </div>
                             </div>
@@ -52,13 +118,13 @@ export const CheckOutForm = ({ setConfirmPageShow }) => {
                         <h2 className="section-text-7 mb2 d-flex-c-s">Delivery address</h2>
                         <p className="text-2 c-gray-1">Select your payment method from the existing one or add new one.</p>
 
-                        <div className={`login-form-wrap ${!showAddressForm ? "hidden-form" : "show-form"}`}>
+                        <div className={`login-form-wrap ${showAddressForm ? "show-form" : "hidden-form"}`}>
 
                             <div className="row">
                                 <div className="col-md-6 col-xs-12">
                                     <div className="form-group input-wrap form-group-lg">
                                         <label className="field-label required">Name</label>
-                                        <input name="name" placeholder="Enter name" maxlength="50" autocomplete="off" type="text" value="" />
+                                        <input name="name" placeholder="Enter name" maxlength="50" autocomplete="off" type="text" value={address.name} onChange={(e) => { handelChangeforAddress(e) }} />
                                     </div>
                                 </div>
                                 <div className="col-md-6 col-xs-12">
@@ -66,7 +132,7 @@ export const CheckOutForm = ({ setConfirmPageShow }) => {
                                         <label className="field-label required">Mobile Number</label>
                                         <div className="input-group-wrap">
                                             <span className="prepend-txt">+91</span>
-                                            <input inputmode="numeric" name="mobile" placeholder="Enter mobile number" autocomplete="off" maxlength="10" type="tel" value="8894968567" />
+                                            <input inputmode="numeric" name="number" maxlength="10" type="tel" value={address.number} onChange={(e) => { handelChangeforAddress(e) }} />
                                         </div>
                                     </div>
                                 </div>
@@ -76,29 +142,25 @@ export const CheckOutForm = ({ setConfirmPageShow }) => {
                                     <div className="form-group input-wrap form-group-lg">
                                         <label className="field-label required">Pincode</label>
                                         <div className="input-group-wrap">
-                                            <input inputmode="numeric" name="pin" placeholder="Enter pincode" maxlength="6" autocomplete="off" type="tel" value="" />
+                                            <input inputmode="numeric" name="pinCode" placeholder="Enter pincode" maxlength="6" autocomplete="off" type="tel" value={address.pinCode} onChange={(e) => { handelChangeforAddress(e) }} />
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-md-6 col-xs-12">
                                     <div className="form-group input-wrap form-group-lg">
                                         <label className="field-label required">City</label>
-                                        <input name="city" placeholder="Enter city" maxlength="40" autocomplete="off" type="text" value="" />
+                                        <input name="city" placeholder="Enter city" maxlength="40" autocomplete="off" type="text" value={address.city} onChange={(e) => { handelChangeforAddress(e) }} />
                                     </div>
                                 </div>
                             </div>
                             <div className="form-group textarea-wrap form-group-lg">
                                 <label className="field-label required">Address</label>
-                                <textarea name="line" placeholder="Enter address" maxlength="300" rows="2" autocomplete="off">
+                                <textarea name="address" placeholder="Enter address" maxlength="300" rows="2" autocomplete="off" value={address.address} onChange={(e) => { handelChangeforAddress(e) }} >
                                 </textarea>
                             </div>
                             <div className="text-right pt8 address-form-button-wrap">
                                 <button type="submit" className="btn-login" disabled=""
-                                    onClick={(e) => {
-                                        e.preventDefault()
-                                        setShowAddressForm(false)
-                                        setShowPaymentForm(true)
-                                    }}>Save and continue</button>
+                                    onClick={(e) => { AddAddress(e) }}>Save and continue</button>
                             </div>
 
                         </div>
