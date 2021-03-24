@@ -32,11 +32,11 @@ export const SearchResult = () => {
 
 
                 if (data.name.includes(value.toUpperCase())) {
-                    arr.push(data)
+                    arr.push({ ...data, category: item.category_id })
                 }
             })
         })
-        console.log(searchArray)
+        console.log(arr)
 
         setSearchArray(arr)
 
@@ -64,7 +64,7 @@ export const SearchResult = () => {
                     <ul className="about-product">
 
                         {searchArray.map((data, i) => {
-                            return (<ProductComp data={data} showImg={true} key={i} />)
+                            return (<ProductComp data={data} showImg={true} key={i} category={data.category} />)
                         })}
                     </ul>
 
@@ -74,7 +74,7 @@ export const SearchResult = () => {
 
                     <h2>No product Found</h2>
                     <p>Please check the spelling or try searching for something else..</p>
-                    <button className="btn-primary-1">Back to home</button>
+                    <Link className="btn-primary-1" to="/">Back to home</Link>
                 </div>
 
             }

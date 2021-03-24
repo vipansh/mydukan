@@ -45,6 +45,13 @@
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 600px) {
+  .search-container {
+    width: 100vw;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+}
 .empty-search {
   margin: 10rem auto;
   width: 50%;

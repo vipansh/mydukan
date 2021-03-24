@@ -14,7 +14,7 @@ export const ProductComp = ({ data, showImg, category }) => {
                 </div>
             </span>
             <div className="product-discription">
-                <Link to={`product/${category}/${data.id}`} className="product-name-txt" >    {data.name}
+                <Link to={`/product/${category}/${data.id}`} className="product-name-txt" >    {data.name}
                 </Link>
                 <p className="prod-unit-txt">per piece</p>
 
