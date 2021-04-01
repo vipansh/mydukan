@@ -15,12 +15,12 @@ export const ProductPage = () => {
     React.useEffect(() => {
         const all_products = [...data.all_products]
 
-        const AboutProduct = all_products.find(data => (category == data.category_id))
+        const AboutProduct = all_products.find(data => (category === data.category_id))
 
         if (AboutProduct) {
             setcategoryName(AboutProduct.category_name)
             const products = AboutProduct.products
-            const currentFoundProduct = products.find(data => (id == data.id))
+            const currentFoundProduct = products.find(data => (id === data.id))
             if (currentFoundProduct) {
                 setProduct(currentFoundProduct)
             }

@@ -11,11 +11,12 @@ export const NavBar = () => {
             <div className="navbar">
                 <div className="navbar-container">
 
-                    <Link to="/"><div className="navbar-title">
-                        <img src={logoimg} alt="logoimg" className="logo-img" style={{ width: "4rem" }} /> <span className="detail">Dukan</span>
-                    </div></Link>
+                    <Link to="/">
+                        <div className="navbar-title">
+                            <img src={logoimg} alt="logoimg" className="logo-img" style={{ width: "4rem" }} /> <span className="detail">Dukan</span>
+                        </div></Link>
                     <div className="navbar-cart">
-                        <Cart />
+                        <Link to="/bag"><Cart /></Link>
                         <Account />
                     </div>
                 </div>
