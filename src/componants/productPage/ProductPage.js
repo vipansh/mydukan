@@ -10,17 +10,21 @@ import "./productpage.css";
 export const ProductPage = () => {
     let { category, id } = useParams();
     const [categoryName, setcategoryName] = React.useState()
-    const [product, setProduct] = React.useState("a")
+    const [product, setProduct] = React.useState()
     const [noProduct, setNoProduct] = React.useState(true)
     React.useEffect(() => {
         const all_products = [...data.all_products]
 
-        const AboutProduct = all_products.find(data => (category === data.category_id))
+        const AboutProduct = all_products.find(data => (category == data.category_id))
+        console.log(all_products, category)
 
         if (AboutProduct) {
             setcategoryName(AboutProduct.category_name)
             const products = AboutProduct.products
-            const currentFoundProduct = products.find(data => (id === data.id))
+            console.log(products)
+
+            const currentFoundProduct = products.find(data => (id == data.id))
+
             if (currentFoundProduct) {
                 setProduct(currentFoundProduct)
             }
