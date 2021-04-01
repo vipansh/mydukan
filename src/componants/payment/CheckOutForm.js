@@ -78,7 +78,7 @@ export const CheckOutForm = ({ setConfirmPageShow }) => {
     return (
 
         <div className="checkout-section">
-            <form autocomplete="off">
+            <form autoComplete="off">
                 <p className="text-2 c-gray-1">Don`t enter in input filed Login for now</p>
                 <div className="checkout-step-wrap active">
                     <div className="checkout-step-circle active">1</div>
@@ -95,7 +95,7 @@ export const CheckOutForm = ({ setConfirmPageShow }) => {
                                 <div className="input-group-wrap  login-form-flex ">
                                     <div>
                                         <span className="prepend-txt">+91</span>
-                                        <input inputmode="numeric" name="mobile" placeholder="88******89" maxlength="10" autocomplete="off" type="tel" value={loginPhoneNo} onChange={(e) => {
+                                        <input inputMode="numeric" name="mobile" placeholder="88******89" maxLength="10" autoComplete="off" type="tel" value={loginPhoneNo} onChange={(e) => {
                                             setLoginPhoneNo(e.target.value)
                                             setLoginErr(false)
                                         }} />
@@ -124,7 +124,7 @@ export const CheckOutForm = ({ setConfirmPageShow }) => {
                                 <div className="col-md-6 col-xs-12">
                                     <div className="form-group input-wrap form-group-lg">
                                         <label className="field-label required">Name</label>
-                                        <input name="name" placeholder="Enter name" maxlength="50" autocomplete="off" type="text" value={address.name} onChange={(e) => { handelChangeforAddress(e) }} />
+                                        <input name="name" placeholder="Enter name" maxLength="50" autoComplete="off" type="text" value={address.name} onChange={(e) => { handelChangeforAddress(e) }} />
                                     </div>
                                 </div>
                                 <div className="col-md-6 col-xs-12">
@@ -132,7 +132,7 @@ export const CheckOutForm = ({ setConfirmPageShow }) => {
                                         <label className="field-label required">Mobile Number</label>
                                         <div className="input-group-wrap">
                                             <span className="prepend-txt">+91</span>
-                                            <input inputmode="numeric" name="number" maxlength="10" type="tel" value={address.number} onChange={(e) => { handelChangeforAddress(e) }} />
+                                            <input inputMode="numeric" name="number" maxLength="10" type="tel" value={address.number} onChange={(e) => { handelChangeforAddress(e) }} />
                                         </div>
                                     </div>
                                 </div>
@@ -142,20 +142,20 @@ export const CheckOutForm = ({ setConfirmPageShow }) => {
                                     <div className="form-group input-wrap form-group-lg">
                                         <label className="field-label required">Pincode</label>
                                         <div className="input-group-wrap">
-                                            <input inputmode="numeric" name="pinCode" placeholder="Enter pincode" maxlength="6" autocomplete="off" type="tel" value={address.pinCode} onChange={(e) => { handelChangeforAddress(e) }} />
+                                            <input inputMode="numeric" name="pinCode" placeholder="Enter pincode" maxLength="6" autoComplete="off" type="tel" value={address.pinCode} onChange={(e) => { handelChangeforAddress(e) }} />
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-md-6 col-xs-12">
                                     <div className="form-group input-wrap form-group-lg">
                                         <label className="field-label required">City</label>
-                                        <input name="city" placeholder="Enter city" maxlength="40" autocomplete="off" type="text" value={address.city} onChange={(e) => { handelChangeforAddress(e) }} />
+                                        <input name="city" placeholder="Enter city" maxLength="40" autoComplete="off" type="text" value={address.city} onChange={(e) => { handelChangeforAddress(e) }} />
                                     </div>
                                 </div>
                             </div>
                             <div className="form-group textarea-wrap form-group-lg">
                                 <label className="field-label required">Address</label>
-                                <textarea name="address" placeholder="Enter address" maxlength="300" rows="2" autocomplete="off" value={address.address} onChange={(e) => { handelChangeforAddress(e) }} >
+                                <textarea name="address" placeholder="Enter address" maxLength="300" rows="2" autoComplete="off" value={address.address} onChange={(e) => { handelChangeforAddress(e) }} >
                                 </textarea>
                             </div>
                             <div className="text-right pt8 address-form-button-wrap">

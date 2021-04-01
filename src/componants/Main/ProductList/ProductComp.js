@@ -6,7 +6,9 @@ export const ProductComp = ({ data, showImg, category }) => {
     return (
         <li className="element-product"  >
             <span className={`product-img-wrap ${!showImg ? "cart-hide" : ""}`}>
-                <img src={data.image} alt={data.name} />
+                <Link to={`/product/${category}/${data.id}`} className="product-img-wrap" >
+                    <img src={data.image} alt={data.name} />
+                </Link>
                 <div className="discount-badge-wrap">
                     <span className="product-discount-badge">
                         {Math.floor(100 - ((data.base_cost / data.original_cost) * 100))}% OFF
