@@ -12,6 +12,7 @@ export const ProductPage = () => {
     const [categoryName, setcategoryName] = React.useState()
     const [product, setProduct] = React.useState()
     const [noProduct, setNoProduct] = React.useState(true)
+
     React.useEffect(() => {
         const all_products = [...data.all_products]
 
@@ -24,6 +25,7 @@ export const ProductPage = () => {
             console.log(products)
 
             const currentFoundProduct = products.find(data => (id == data.id))
+
 
             if (currentFoundProduct) {
                 setProduct(currentFoundProduct)

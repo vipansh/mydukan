@@ -2,6 +2,10 @@ import React from 'react'
 import { AddBtn } from '../AddBtn/AddBtn'
 
 export const AboutProductInPage = ({ data }) => {
+
+console.log(data)
+if(data){
+
     return (
         <div className="product-page-container">
             <div className="product-page-container-flex">
@@ -38,4 +42,8 @@ export const AboutProductInPage = ({ data }) => {
 
         </div>
     )
+}
+return(
+    <div>Loading</div>
+)
 }
