@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 
 export const CartContaxt = React.createContext();
 
+// export function useCartContaxt() {
+//     return useContext(CartContaxt)
+// }
+
+
 export const CartContaxtProvider = ({ children }) => {
     const [cartItem, setCartItem] = useState([])
     const [pending, setPending] = useState(true);
